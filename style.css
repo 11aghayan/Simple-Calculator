@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  margin: 15rem auto 0;
+  border: 1px solid black;
+  gap: 1em;
+}
+
+.display-div {
+  width: 100%;
+  border-bottom: 1px solid blue;
+  display: flex;
+}
+
+.display {
+  text-align: center;
+  font-size: 4em;
+  width: 93%;
+}
+
+.erase {
+  width: 2em;
+}
+
+.btn {
+  font-size: 6em;
+}
