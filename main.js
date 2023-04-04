@@ -7,6 +7,7 @@ let number2 = [];
 let result;
 let action;
 let equals;
+let ac = false;
 
 function math(a, b, sign) {
   let i = 1;
@@ -47,7 +48,9 @@ buttons.forEach((btn) => {
         equals = false;
         number = number1;
       }
-      number.push(val);
+      if (!(!number.length && val === '0')) {
+        number.push(val);
+      }
     }
     // Erase check
     if (val === 'erase') {
@@ -55,11 +58,11 @@ buttons.forEach((btn) => {
     } 
     // AC check
     if (val === 'ac') {
-      number1 = [];
-      number2 = [];
-      number = [];
-      action = null;
-      equals = false;
+        number1 = [];
+        number2 = [];
+        number = [];
+        action = null;
+        equals = false;
     }
     // Number Sign check (+/-)
     if (val === 'sign' && number.length) {
