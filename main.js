@@ -11,6 +11,7 @@ let equals;
 let ac = false;
 
 function math(a, b, sign) {
+  debugger;
   let i = 1;
   let j = 1;
   if (a % 1 !== 0) {
@@ -18,13 +19,21 @@ function math(a, b, sign) {
       a *= 10;
     }
   }
-  if (b % 1 !== 0) {
+  if (b % 1 !== 0 && sign !== '/') {
     for (j; b % 1 !== 0; j*=10) {
       b *= 10;
     }
   }
   const foo = new Function(`return ${a} ${sign} ${b}`);
-  return (foo() / (i * j)) + '';
+  let divNum;
+
+  if (sign === '+' || sign === '-') {
+    divNum = i > j ? i : j;
+  } else {
+    divNum = i * j;
+  }
+
+  return (foo() / divNum) + '';
 }
 
 buttons.forEach((btn) => {
@@ -74,7 +83,7 @@ buttons.forEach((btn) => {
       }
     } 
     // Action check
-    if (btn.classList[1] === 'action' && number1.length) { 
+    if (btn.classList[1] === 'action' && number1.length) {  
       if (equals) {
         number2 = [];
         equals = false;
