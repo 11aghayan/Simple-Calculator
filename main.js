@@ -1,7 +1,8 @@
+
 const display = document.querySelector('.display');
 const buttons = document.querySelectorAll('.btn');
 
-const numsReg = /[0-9]/;
+const numsReg = /\d/;
 let number1 = [];
 let number2 = [];
 let result;
@@ -114,5 +115,3 @@ buttons.forEach((btn) => {
     }
   });
 });
-
-

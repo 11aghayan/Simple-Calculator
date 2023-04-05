@@ -4,32 +4,151 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgb(26, 39, 61);
+}
+
 .container {
   width: 100%;
   max-width: 40rem;
   display: flex;
   flex-direction: column;
-  margin: 15rem auto 0;
-  border: 1px solid black;
-  gap: 1em;
+  margin: 2.7rem auto 3em;
+  border-radius: 2em;
+  box-shadow: 0 0 1em 0 #000;
 }
 
 .display-div {
   width: 100%;
-  border-bottom: 1px solid blue;
   display: flex;
+  align-items: center;
+  padding-inline: 1em;
+  background: rgb(225, 225, 225);
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
 }
 
 .display {
-  text-align: center;
   font-size: 4em;
   width: 93%;
+  color: rgb(26, 39, 61);
 }
 
-.erase {
-  width: 2em;
+.btn-div {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "ac sign percent plus"
+                       "seven eight nine minus"
+                       "four five six multiply"
+                       "one two three division"
+                       "zero zero dot equal";
+  background: rgb(0, 101, 144);
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
 }
 
 .btn {
   font-size: 6em;
+  height: 2em;
+  background: none;
+  border: none;
+  border-radius: 3em;
+  color: rgb(104, 210, 245);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: rgb(1, 89, 127);
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.erase {
+  width: 2em;
+  height: 2em;
+  font-size: 2em;
+  background: none;
+}
+
+.erase:hover {
+  background: none;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.division {
+  grid-area: division;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+.sign {
+  grid-area: sign;
+}
+
+.percent {
+  grid-area: percent;
+}
+
+.ac {
+  grid-area: ac;
 }
